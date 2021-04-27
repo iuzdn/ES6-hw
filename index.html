@@ -10,11 +10,8 @@
     <script src="./src/ex2-async-await.js"></script>
     <script type="module">
       const myModule = "./src/ex3-module.js";
-      document
-        .querySelector("#sayHi")
-        .addEventListener("click", () =>
-          import(myModule).then((res) => res.sayHi())
-        );
+      document.getElementById("sayHi").onclick = () =>
+        import(myModule).then((res) => res.sayHi());
     </script>
   </body>
 </html>
