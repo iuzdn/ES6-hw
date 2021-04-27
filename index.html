@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ES6 Homework</title>
+  </head>
+  <body>
+    <button onclick="loadData()">LoadData</button>
+    <button id="sayHi">Say Hi</button>
+    <script src="./src/ex1-classes.js"></script>
+    <script src="./src/ex2-async-await.js"></script>
+    <script type="module">
+      const myModule = "./src/ex3-module.js";
+      document
+        .querySelector("#sayHi")
+        .addEventListener("click", () =>
+          import(myModule).then((res) => res.sayHi())
+        );
+    </script>
+  </body>
+</html>
